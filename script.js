@@ -67,3 +67,20 @@ list.addEventListener("click", function (event) {
     event.target.style.backgroundColor = "lightgreen";
   }
 });
+
+// Event Delegation with buttons
+
+const buttonList = document.getElementById("buttonContainer");
+const displayMessage = document.getElementById("buttonOutput");
+
+buttonList.addEventListener("click", function (event) {
+  if (event.target.id === "button1") {
+    displayMessage.textContent =
+      "You have clicked button 1 sorry youre not a winner";
+  } else if (event.target.id === "button2") {
+    displayMessage.textContent = "You have click the second button good guess";
+  } else if (event.target.id === "button3") {
+    displayMessage.textContent =
+      "Surprise you clicked the winning button congratulations";
+  }
+});
