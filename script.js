@@ -57,3 +57,13 @@ function validateName() {
     message.textContent = "Name must be atleast three characters long";
   }
 }
+
+// Event Delegation
+
+const list = document.getElementById("itemList");
+
+list.addEventListener("click", function (event) {
+  if (event.target.tagName === "LI") {
+    event.target.style.backgroundColor = "lightgreen";
+  }
+});
