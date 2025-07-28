@@ -35,3 +35,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// // create function to handle on focus
+function handleFocus() {
+  const emailInput = document.getElementById("email");
+  emailInput.style.background = "yellow";
+}
+
+// create function to handle on blur
+function validateName() {
+  const name = document.getElementById("nameInput");
+  const nameValidation = name.value.trim();
+  const message = document.getElementById("inputMessage");
+
+  if (nameValidation.length >= 3) {
+    name.style.backgroundColor = "lightgreen";
+    message.textContent = "Name is accepted";
+    console.log("name is accepted");
+  } else {
+    name.style.backgroundColor = "salmon";
+    message.textContent = "Name must be atleast three characters long";
+  }
+}

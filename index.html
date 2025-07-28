@@ -18,5 +18,10 @@
       <button type="submit">Submit</button>
     </form>
     <div id="message"></div>
+    <label for="email">Email : </label>
+    <input type="text" id="email" onfocus="handleFocus()" /> <br />
+    <label for="nameInput">Enter your name: </label>
+    <input type="text" id="nameInput" onblur="validateName()" />
+    <div id="inputMessage"></div>
   </body>
 </html>
